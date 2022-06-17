@@ -1,14 +1,11 @@
 import React, {useState} from "react";
 
 function Dropdown ({spirit, setSpirit}) {
-
-    console.log(spirit)
-   
+ 
     const [drink, setDrink] = useState("...");
     const [choice, setChoice] = useState("");
    
     function handleChange(e){
-        console.log(e.target.value);
         setChoice(e.target.value)
     }
 
@@ -17,7 +14,6 @@ function Dropdown ({spirit, setSpirit}) {
         console.log(choice);     
         setDrink(choice);
         setSpirit(choice)
-        console.log(`user selects ${choice}`)
     }
 
     return(
@@ -30,9 +26,7 @@ function Dropdown ({spirit, setSpirit}) {
                     <option value="whisky">Whisky</option>
                 </select>
                 <button onClick={storeChoice}>SHOW ME THE BEVS!</button>
-            
             </form>
-            <p>Your chosen spirit is: <span>{drink}</span>  </p>
         </div>
     )
 }
