@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function Dropdown ({spirit, setSpirit}) {
+function Dropdown ({spirit, setSpirit, lookupURL, setLookUpURL}) {
  
     const [drink, setDrink] = useState("...");
     const [choice, setChoice] = useState("");
@@ -14,6 +14,7 @@ function Dropdown ({spirit, setSpirit}) {
         console.log(choice);     
         setDrink(choice);
         setSpirit(choice)
+        setLookUpURL(`${lookupURL}${choice}`)
     }
 
     return(

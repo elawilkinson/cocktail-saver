@@ -1,27 +1,33 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 
 import GCocktailData from '../GinCocktailData/data.js'
 import VCocktailData from '../VodkaCocktailData/data.js';
 import RCocktailData from '../RumCocktailData/data.js';
 
 
-function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData}) {
-    // const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
-    // useEffect(() => {
-    //     fetch(`${url})
-    //     .then(res => {
-    //         return res.json()
-    //     })
-    //     .then(data => {
-    //         let suggestionList = data.drinks
-    //         setData(suggestionList[7].idDrink);
-    //         setSuggestion(suggestionList[7].strDrink);
-    // },[setData])
+function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, lookupURL}) {
+    const [ingredients, setIngredients] = useState([]);
+    const [display, setDisplay] = useState({spirit})
+    
+    useEffect(() => {
+        fetch(lookupURL)
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            const info = data.drinks[0]
+            // this causes an infinite loop!!!!
+            console.log(info)
+            setIngredients([info.strIngredient1, info.strIngredient2])
+    },[])
+    })
 
     return(
         <div>
-              <GCocktailData data={data} setData={setData}></GCocktailData>
-              <p>{data}</p>
+            <GCocktailData data={data} setData={setData}></GCocktailData>
+            <VCocktailData data={data} setData={setData}></VCocktailData>
+            <RCocktailData data={data} setData={setData}></RCocktailData>
+            <p>Ingredients: {ingredients}</p>
        </div>
     )
 }
@@ -35,8 +41,7 @@ export default RecipeCard
 // <p>Famous fans include: {fan} </p>
 // <p>Ideal serving: {recipe} </p>
 
-// <VCocktailData data={data} setData={setData}></VCocktailData>
-// <RCocktailData data={data} setData={setData}></RCocktailData>
+
 
 // console.log(`${spirit} from the card`);
 // if(spirit==="gin"){
