@@ -1,19 +1,20 @@
 import React from "react";
 
 
-function RecipeCard ({spirit, setSpirit}) {
-    function handleClick(){
-        setSpirit("yo")
-    }
-
+function RecipeCard ({spirit, setSpirit, recipe, setRecipe}) {
+    const name = "Dark and Stormy";
+    const fan = "Glenda Jackson";
+    console.log(`${spirit} from the card`);
 
     return(
         <div>
-            <h1>Hiya</h1>
-            <p>{spirit}</p>
-            <button onClick={handleClick}>change</button>
+            <h1>{name}</h1>
+            <p>Key ingredient: {spirit} </p>
+            <p>Famous fans include: {fan} </p>
+      
         </div>
     )
 }
 
 export default RecipeCard
+
