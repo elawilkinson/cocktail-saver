@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 
+import '../App/App.css'
+
 import GCocktailData from '../GinCocktailData/data.js'
 import CocktailDisplay from "../CocktailDisplay/index.js";
 
@@ -16,8 +18,8 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
 
     
       return(
-        <div>
-            <GCocktailData 
+        <div className="recipeCard">
+               <GCocktailData 
                 data={data} 
                 setData={setData} 
                 spirit={spirit}
@@ -30,7 +32,7 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
                 individURL={individURL}
                 setRecipe={setRecipe}
                 />
-            <p>{mainIng}</p>
+                <p>{mainIng}</p>
             <p>{ing2}</p>
             <p>{ing3}</p>
             <p>{serveMe}</p>

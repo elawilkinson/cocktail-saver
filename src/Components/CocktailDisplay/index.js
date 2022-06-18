@@ -1,5 +1,7 @@
 import {useState} from "react";
 
+import '../App/App.css'
+
 function CocktailDisplay ({individURL, setRecipe}) {
    // const [ingredients, setIngredients] = useState({})
 
@@ -11,8 +13,10 @@ function CocktailDisplay ({individURL, setRecipe}) {
     }
 
    return(
-        <div>
-            <button onClick={() => {fetchCocktail()}}>Get my ingredients</button>
+        <div className="recipeCard">
+            <div className="ingSubmit">
+            <button id="submitIng" onClick={() => {fetchCocktail()}}>Get my ingredients</button>
+            </div>
         </div>
     )
 }

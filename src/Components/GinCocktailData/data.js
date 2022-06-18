@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import '../App/App.css'
 
 // importing a random value from a non-React file to avoid Strict Mode comps. 
 //import {pos} from "../../index";
@@ -26,9 +27,9 @@ function GCocktailData ({data, setData, iURL, lookupURL, individURL, setIndividU
 });
 
     return(
-        <div>
-            <h2 className="introText">Your suggestion is: </h2>
-            <h2>{suggestion}</h2>
+        <div className="recipeCard">
+            <h2 className="introText" id="recipeIntro">Your suggestion is: </h2>
+            <h2 id="recipeIntro2">{suggestion}</h2>
          </div>
     )
 }
