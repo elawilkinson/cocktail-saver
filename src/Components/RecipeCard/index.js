@@ -4,6 +4,7 @@ import '../App/App.css'
 
 import GCocktailData from '../GinCocktailData/data.js'
 import CocktailDisplay from "../CocktailDisplay/index.js";
+import IngredientDisplay from "../IngredientDisplay";
 
 function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, lookupURL, iURL, setIndividURL, individURL}) {
     // SPIRIT = USER'S CHOICE, HAS COME FROM DROPDOWN
@@ -11,11 +12,10 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
     // DATA = COCKTAIL ID NUMBER, NEEDS TO BE UPDATED IN DATA
     
     // Pulling out the ingredient headlines
-    const mainIng = `You will need: 1) absolutely loads of ${recipe[0].strIngredient1}  `;
-    const ing2 = ` 2) a healthy dash of ${recipe[0].strIngredient2}, `;
-    const ing3 = ` & finally, 3) a light sprinkling of ${recipe[0].strIngredient3}.`;
-    const serveMe = ` Please serve me in a ${recipe[0].strGlass}. Enjoy! `;
-
+    const [mainIng, setMainIng] = useState("");
+    const [ing2, setIng2] = useState("");
+    const [ing3, setIng3] = useState("");
+    const [serveInst, setServeInst] = useState("");
     
       return(
         <div>
@@ -31,13 +31,23 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
                 </GCocktailData>
                 <CocktailDisplay
                     individURL={individURL}
-                    setRecipe={setRecipe} />
+                    setRecipe={setRecipe} 
+                    recipe={recipe}
+                    setMainIng={setMainIng}
+                    setIng2={setIng2}
+                    setIng3={setIng3}
+                    setServeInst={setServeInst}
+                    />
                 </div>
-                <div className="returnIngredients">
-                    <p>{mainIng}{ing2}{ing3}</p>
-                    <p>{serveMe}</p>
-                </div>
-        </div>
+                <IngredientDisplay
+                    recipe={recipe}
+                    setRecipe={setRecipe}
+                    mainIng={mainIng}
+                    ing2={ing2}
+                    ing3={ing3}
+                    serveInst={serveInst}
+                    />
+         </div>
         
     )
 }
