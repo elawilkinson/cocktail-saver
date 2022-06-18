@@ -13,7 +13,7 @@ function IngredientDisplay({recipe,
 
     
     return(
-        <div className="returnIngredients">
+        <div>
             <p>{mainIng} {ing2} {ing3} </p>
             <p>{serveInst}</p>
         </div>

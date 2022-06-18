@@ -11,7 +11,7 @@
   background-position: center ;
   background-blend-mode: lighten;
   color: white;
-  height: 100vh;
+  height: 110vh;
   width: 100vw
 
 }
@@ -83,7 +83,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: center
+  text-align: center;
 }
 
 #recipeIntro{
@@ -125,10 +125,13 @@
 .returnIngredients{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   height: 15vh;
+  width: 70vw;
   background-color: black;
   color: white;
   border-style: solid;
   border-width: 3px;
-  border-color: white
+  border-color: white;
 }

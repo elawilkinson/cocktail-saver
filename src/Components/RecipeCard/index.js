@@ -34,21 +34,19 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
                     setServeInst={setServeInst}
                     recipe={recipe}>
                 </GCocktailData>
+            </div>
+            <div> 
                 <CocktailDisplay
                     individURL={individURL}
                     setRecipe={setRecipe} 
                     recipe={recipe}
-                    />
-                </div>
-                <IngredientDisplay
-                    recipe={recipe}
-                    setRecipe={setRecipe}
                     mainIng={mainIng}
                     ing2={ing2}
                     ing3={ing3}
                     serveInst={serveInst}
                     />
-         </div>
+                </div>
+        </div>
         
     )
 }
