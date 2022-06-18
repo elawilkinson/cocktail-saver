@@ -32,7 +32,7 @@ function App() {
         lookupURL={lookupURL}
         setLookUpURL={setLookUpURL}
         URL={URL}
-        />
+          />
       <RecipeCard 
         spirit={spirit} 
         setSpirit={setSpirit} 

@@ -12,9 +12,7 @@ function CocktailDisplay ({iURL, individURL, setIndividURL, recipe, setRecipe}) 
 
    return(
         <div>
-            <p>COCKTAIL DETAILS HERE</p>
             <button onClick={() => {fetchCocktail()}}>Clickhere</button>
-            <p>stuff</p>
         </div>
     )
 }
