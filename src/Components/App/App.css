@@ -124,7 +124,7 @@
 
 .returnIngredients{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 15vh;
   background-color: black;
   color: white;
