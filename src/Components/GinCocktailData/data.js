@@ -1,24 +1,31 @@
 import React, {useState, useEffect} from "react";
 
-function GCocktailData ({data, setData}) {
+function GCocktailData ({data, setData, iURL, individURL, setIndividURL}) {
+    // RECIPE = INGREDIENTS/METHOD, HAS A DEFAULT SETTING BUT NEEDS TO BE UPDATED 
+    // DATA = COCKTAIL ID NUMBER, NEEDS TO BE UPDATED IN DATA
+    // SUGGESTION = COCKTAIL NAME
     const [suggestion, setSuggestion] = useState();
+   // const [ingredients, setIngredients] = useState("pineapple");
+    
 
-     useEffect(() => {
-        fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin")
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            let suggestionList = data.drinks
-            setData(suggestionList[7].idDrink);
-            setSuggestion(suggestionList[7].strDrink);
-    },[setData])
-});
+        useEffect(() => {
+            fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin")
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                let suggestionList = data.drinks
+                setData(suggestionList[10].idDrink);
+                setSuggestion(suggestionList[10].strDrink);
+                setIndividURL(`${iURL}${suggestionList[10].idDrink}`)
+                console.log(individURL)          
+        },[setData])
+    });
 
     return(
         <div>
             <p> Your suggestion is {suggestion}, we hope you enjoy!</p>
-        </div>
+         </div>
     )
 }
 export default GCocktailData

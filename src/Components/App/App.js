@@ -5,10 +5,21 @@ import Dropdown from '../Dropdown';
 import RecipeCard from '../RecipeCard';
 
 function App() {
+  // Tracking the URL needed
+  const URL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i="
+  const [lookupURL, setLookUpURL] = useState(URL)
+  const iURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+  const [individURL, setIndividURL] = useState(iURL)
+
+   // Tracking the user's chosen spirit
+   const [spirit, setSpirit] = useState("banana");
+
+  //Tracking the returned cocktail ID
   const[data, setData] = useState([]);
-  const [spirit, setSpirit] = useState("banana");
+
+  // Tracking the returned recipe
   const [recipe, setRecipe] = useState("glass and ice babes")
-  const [lookupURL, setLookUpURL] = useState("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=")
+
 
   console.log(`${lookupURL} from the App page`);
  
@@ -20,6 +31,7 @@ function App() {
         setSpirit={setSpirit} 
         lookupURL={lookupURL}
         setLookUpURL={setLookUpURL}
+        URL={URL}
         />
       <RecipeCard 
         spirit={spirit} 
@@ -29,6 +41,9 @@ function App() {
         data={data} 
         setData={setData}
         lookupURL={lookupURL}
+        iURL={iURL}
+        individURL={individURL}
+        setIndividURL={setIndividURL}
         />
      </div>
   );

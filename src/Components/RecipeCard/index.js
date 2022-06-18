@@ -1,38 +1,41 @@
 import React, {useEffect, useState} from "react";
 
 import GCocktailData from '../GinCocktailData/data.js'
+import CocktailDisplay from "../CocktailDisplay/index.js";
 import VCocktailData from '../VodkaCocktailData/data.js';
 import RCocktailData from '../RumCocktailData/data.js';
 
 
-function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, lookupURL}) {
-    const [ingredients, setIngredients] = useState([]);
-    const [display, setDisplay] = useState({spirit})
+function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, lookupURL, iURL, setIndividURL, individURL}) {
+    // SPIRIT = USER'S CHOICE, HAS COME FROM DROPDOWN
+    // RECIPE = INGREDIENTS/METHOD, HAS A DEFAULT SETTING BUT NEEDS TO BE UPDATED HERE 
+    // DATA = COCKTAIL ID NUMBER, NEEDS TO BE UPDATED IN DATA
     
-    useEffect(() => {
-        fetch(lookupURL)
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            const info = data.drinks[0]
-            // this causes an infinite loop!!!!
-            console.log(info)
-            setIngredients([info.strIngredient1, info.strIngredient2])
-    },[])
-    })
-
-    return(
+      return(
         <div>
-            <GCocktailData data={data} setData={setData}></GCocktailData>
-            <VCocktailData data={data} setData={setData}></VCocktailData>
-            <RCocktailData data={data} setData={setData}></RCocktailData>
-            <p>Ingredients: {ingredients}</p>
-       </div>
+            <GCocktailData 
+                data={data} 
+                setData={setData} 
+                iURL={iURL}
+                individURL={individURL}
+                setIndividURL={setIndividURL}>
+            </GCocktailData>
+            <CocktailDisplay
+                iURL={iURL}
+                individURL={individURL}
+                setIndividURL={setIndividURL} 
+                recipe={recipe} 
+                setRecipe={setRecipe}
+                />
+        </div>
+        
     )
 }
 
 export default RecipeCard
+
+/* <VCocktailData data={data} setData={setData}></VCocktailData>
+<RCocktailData data={data} setData={setData}></RCocktailData> */
 
 // const name = "Dark and Stormy";
 // const fan = "Glenda Jackson";
