@@ -22,21 +22,20 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
             <GCocktailData 
                 data={data} 
                 setData={setData} 
+                spirit={spirit}
+                lookupURL={lookupURL}
                 iURL={iURL}
                 individURL={individURL}
                 setIndividURL={setIndividURL}>
             </GCocktailData>
             <CocktailDisplay
-                iURL={iURL}
                 individURL={individURL}
-                setIndividURL={setIndividURL} 
-                recipe={recipe} 
                 setRecipe={setRecipe}
                 />
             <p>{mainIng}</p>
             <p>{ing2}</p>
             <p>{ing3}</p>
-            <p>Serve me in a {serveMe}</p>
+            <p>{serveMe}</p>
         </div>
         
     )

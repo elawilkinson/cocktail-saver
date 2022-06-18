@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-function GCocktailData ({data, setData, iURL, individURL, setIndividURL}) {
+function GCocktailData ({data, setData, iURL, lookupURL, individURL, setIndividURL, spirit}) {
     // RECIPE = INGREDIENTS/METHOD, HAS A DEFAULT SETTING BUT NEEDS TO BE UPDATED 
     // DATA = COCKTAIL ID NUMBER, NEEDS TO BE UPDATED IN DATA
     // SUGGESTION = COCKTAIL NAME
@@ -9,15 +9,15 @@ function GCocktailData ({data, setData, iURL, individURL, setIndividURL}) {
     
 
         useEffect(() => {
-            fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin")
+            fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${spirit}`)
             .then(res => {
                 return res.json()
             })
             .then(data => {
                 let suggestionList = data.drinks
-                setData(suggestionList[10].idDrink);
-                setSuggestion(suggestionList[10].strDrink);
-                setIndividURL(`${iURL}${suggestionList[10].idDrink}`)
+                setData(suggestionList[0].idDrink);
+                setSuggestion(suggestionList[0].strDrink);
+                setIndividURL(`${iURL}${suggestionList[0].idDrink}`)
                 console.log(individURL)          
         },[setData])
     });

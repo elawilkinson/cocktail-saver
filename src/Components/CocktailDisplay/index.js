@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-function CocktailDisplay ({iURL, individURL, setIndividURL, recipe, setRecipe}) {
+function CocktailDisplay ({individURL, setRecipe}) {
    // const [ingredients, setIngredients] = useState({})
 
     async function fetchCocktail() {
@@ -12,7 +12,7 @@ function CocktailDisplay ({iURL, individURL, setIndividURL, recipe, setRecipe}) 
 
    return(
         <div>
-            <button onClick={() => {fetchCocktail()}}>Clickhere</button>
+            <button onClick={() => {fetchCocktail()}}>Get my ingredients</button>
         </div>
     )
 }

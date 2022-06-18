@@ -25,7 +25,7 @@ function Dropdown ({spirit, setSpirit, lookupURL, setLookUpURL, URL}) {
                     <option value="gin">Gin</option>
                     <option value="whisky">Whisky</option>
                 </select>
-                <button onClick={storeChoice}>SHOW ME THE BEVS!</button>
+                <button onClick={storeChoice}>OK</button>
             </form>
         </div>
     )

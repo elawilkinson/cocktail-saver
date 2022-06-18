@@ -26,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello</h1>
+      <h2>Please select your leftover booze, and hit OK.</h2>
       <Dropdown 
         spirit={spirit} 
         setSpirit={setSpirit} 
