@@ -10,6 +10,12 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
     // SPIRIT = USER'S CHOICE, HAS COME FROM DROPDOWN
     // RECIPE = INGREDIENTS/METHOD, HAS A DEFAULT SETTING BUT NEEDS TO BE UPDATED HERE 
     // DATA = COCKTAIL ID NUMBER, NEEDS TO BE UPDATED IN DATA
+    console.log({recipe})
+    const mainIng = recipe[0].strIngredient1
+    const ing2 = recipe[0].strIngredient2
+    const ing3 = recipe[0].strIngredient3
+    const serveMe = recipe[0].strGlass
+
     
       return(
         <div>
@@ -27,6 +33,10 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
                 recipe={recipe} 
                 setRecipe={setRecipe}
                 />
+            <p>{mainIng}</p>
+            <p>{ing2}</p>
+            <p>{ing3}</p>
+            <p>Serve me in a {serveMe}</p>
         </div>
         
     )
