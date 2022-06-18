@@ -18,12 +18,12 @@ function App() {
   const[data, setData] = useState([]);
 
   // Tracking the returned recipe
-  const [recipe, setRecipe] = useState("glass and ice babes")
+  const [recipe, setRecipe] = useState("glass and ice babes") // method
  
   return (
-    <div className="App">
-      <h1>Hello</h1>
-      <h2>Please select your leftover booze, and hit OK.</h2>
+    <div className="App" >
+      <h1 className="introText">Hello</h1>
+      <h2 className="introText">Please select your leftover booze, and hit OK.</h2>
       <Dropdown 
         spirit={spirit} 
         setSpirit={setSpirit} 

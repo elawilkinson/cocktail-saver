@@ -7,11 +7,12 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
     // SPIRIT = USER'S CHOICE, HAS COME FROM DROPDOWN
     // RECIPE = INGREDIENTS/METHOD, HAS A DEFAULT SETTING BUT NEEDS TO BE UPDATED HERE 
     // DATA = COCKTAIL ID NUMBER, NEEDS TO BE UPDATED IN DATA
-    console.log({recipe})
-    const mainIng = recipe[0].strIngredient1
-    const ing2 = recipe[0].strIngredient2
-    const ing3 = recipe[0].strIngredient3
-    const serveMe = recipe[0].strGlass
+    
+    // Pulling out the ingredient headlines
+    const mainIng = recipe[0].strIngredient1;
+    const ing2 = recipe[0].strIngredient2;
+    const ing3 = recipe[0].strIngredient3;
+    const serveMe = recipe[0].strGlass;
 
     
       return(
@@ -39,22 +40,3 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
 }
 
 export default RecipeCard
-
-/* <VCocktailData data={data} setData={setData}></VCocktailData>
-<RCocktailData data={data} setData={setData}></RCocktailData> */
-
-// const name = "Dark and Stormy";
-// const fan = "Glenda Jackson";
-// <h1>{name}</h1>
-// <p>Key ingredient: {spirit} </p>
-// <p>Famous fans include: {fan} </p>
-// <p>Ideal serving: {recipe} </p>
-
-
-
-// console.log(`${spirit} from the card`);
-// if(spirit==="gin"){
-//     console.log("testing if statements")
-//   }
-
-

@@ -8,7 +8,7 @@ const rn = require('random-number');
 const indexes = [];
 export const gen = rn.generator ({
     min:  0,
-    max:  40,
+    max:  20,
     integer: true
 });
 

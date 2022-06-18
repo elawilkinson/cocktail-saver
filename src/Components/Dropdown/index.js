@@ -18,14 +18,14 @@ function Dropdown ({spirit, setSpirit, lookupURL, setLookUpURL, URL}) {
 
     return(
         <div>
-            <form>
-                <select onChange={handleChange}>
+            <form className="alcoholMenu">
+                <select onChange={handleChange} className="alcoholOptions">
                     <option value="vodka">Vodka</option>
                     <option value="rum">Rum</option>
                     <option value="gin">Gin</option>
                  </select>
-                <button onClick={storeChoice}>OK</button>
-            </form>
+                <button className="submitAlc" onClick={storeChoice}>OK</button>
+             </form>
         </div>
     )
 }
