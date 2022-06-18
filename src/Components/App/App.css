@@ -2,7 +2,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: black;
   background-image: url("https://globalnews.ca/wp-content/uploads/2013/07/cocktail251.jpg?quality=85&strip=all"); 
@@ -16,14 +16,41 @@
 
 }
 
-.introText{
+.navbar{
+  display: flex;
+  justify-content: right;
   background-color: blueviolet;
-  font-size: 3vw;
+  color: white
+}
+
+.navItem{
+  padding-right: 5vw;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  color: white;
+  text-decoration: none;
+}
+
+.introText{
+  background-color: rgb(49, 2, 93);
+  font-size: 2vw;
+}
+
+#big-text{
+  margin-left: -40vw;
+  font-size: 4vw;
+  background-color: blueviolet;
+}
+
+#second-text{
+  margin-left: -40vw;
+  margin-top: -10vh;
 }
 
 .alcoholMenu{
   display: flex;
   flex-direction: row;
+  margin-top: -10vh;
 }
 
 .alcoholOptions{

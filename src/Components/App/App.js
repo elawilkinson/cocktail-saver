@@ -21,9 +21,17 @@ function App() {
   const [recipe, setRecipe] = useState("glass and ice babes") // method
  
   return (
+    <main>
+    <div className='navOnly'>
+      <nav className="navbar">
+            <a className="navItem" href="google.com">Contact</a>
+            <a className="navItem" href="google.com">Stockists</a>
+            <a className="navItem" href="google.com">Share</a>
+          </nav>
+    </div>
     <div className="App" >
-      <h1 className="introText">Hello</h1>
-      <h2 className="introText">Please select your leftover booze, and hit OK.</h2>
+      <h1 id="big-text">H e l l o .</h1>
+      <h2 className="introText" id="second-text">Please select your leftover booze, and hit OK.</h2>
       <Dropdown 
         spirit={spirit} 
         setSpirit={setSpirit} 
@@ -44,6 +52,7 @@ function App() {
         setIndividURL={setIndividURL}
         />
      </div>
+     </main>
   );
 }
 
