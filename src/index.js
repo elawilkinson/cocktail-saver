@@ -2,15 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './Components/App/App.js'
+
+
 const rn = require('random-number');
-const gen = rn.generator ({
+const indexes = [];
+export const gen = rn.generator ({
     min:  0,
     max:  40,
     integer: true
 });
 
-export const pos = gen();
-console.log(pos);
+for(let i=0; i<11; i++){
+  const pos = gen();
+  indexes.push(pos)
+}
+console.log(indexes);
+export {indexes};
+
+// function generateRandCocktails() {
+//   const totalCocktails = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//   const randCocktails = totalCocktails.map((num) => 
+//       gen());
+//   const sortedRand = randCocktails.sort();
+  
+// }
+
+// const indexes = generateRandCocktails();
+// console.log(indexes);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
