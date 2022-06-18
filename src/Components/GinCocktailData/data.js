@@ -34,11 +34,3 @@ function GCocktailData ({data, setData, iURL, lookupURL, individURL, setIndividU
     )
 }
 export default GCocktailData
-//   <p> Your suggestion is {suggestion}, we hope you enjoy!</p>
-            // const randomRecipePage = getRandomInt(suggestionList.length)
-            // let suggestion = data.drinks[randomRecipePage]
-            // console.log(`Gin suggestion is ${suggestion.strDrink}`)
-            // return setData(suggestion)
-                //  function getRandomInt(max) {
-    //     return Math.floor(Math.random() * max);
-    //   }
