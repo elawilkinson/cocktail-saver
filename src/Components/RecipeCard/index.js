@@ -2,9 +2,6 @@ import React, {useEffect, useState} from "react";
 
 import GCocktailData from '../GinCocktailData/data.js'
 import CocktailDisplay from "../CocktailDisplay/index.js";
-import VCocktailData from '../VodkaCocktailData/data.js';
-import RCocktailData from '../RumCocktailData/data.js';
-
 
 function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, lookupURL, iURL, setIndividURL, individURL}) {
     // SPIRIT = USER'S CHOICE, HAS COME FROM DROPDOWN

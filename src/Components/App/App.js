@@ -19,9 +19,6 @@ function App() {
 
   // Tracking the returned recipe
   const [recipe, setRecipe] = useState("glass and ice babes")
-
-
-  console.log(`${lookupURL} from the App page`);
  
   return (
     <div className="App">

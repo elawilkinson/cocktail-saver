@@ -2,6 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './Components/App/App.js'
+const rn = require('random-number');
+const gen = rn.generator ({
+    min:  0,
+    max:  40,
+    integer: true
+});
+
+export const pos = gen();
+console.log(pos);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -23,8 +23,7 @@ function Dropdown ({spirit, setSpirit, lookupURL, setLookUpURL, URL}) {
                     <option value="vodka">Vodka</option>
                     <option value="rum">Rum</option>
                     <option value="gin">Gin</option>
-                    <option value="whisky">Whisky</option>
-                </select>
+                 </select>
                 <button onClick={storeChoice}>OK</button>
             </form>
         </div>
