@@ -4,20 +4,20 @@ import './index.css';
 import App from './Components/App/App.js'
 
 
-const rn = require('random-number');
-const indexes = [];
-export const gen = rn.generator ({
-    min:  0,
-    max:  20,
-    integer: true
-});
+// const rn = require('random-number');
+// const indexes = [];
+// export const gen = rn.generator ({
+//     min:  0,
+//     max:  20,
+//     integer: true
+// });
 
-for(let i=0; i<11; i++){
-  const pos = gen();
-  indexes.push(pos)
-}
-console.log(indexes);
-export {indexes};
+// for(let i=0; i<11; i++){
+//   const pos = gen();
+//   indexes.push(pos)
+// }
+// console.log(indexes);
+// export {indexes};
 
 // function generateRandCocktails() {
 //   const totalCocktails = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

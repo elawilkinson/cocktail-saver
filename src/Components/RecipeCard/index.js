@@ -16,7 +16,7 @@ function RecipeCard ({spirit, setSpirit, recipe, setRecipe, data, setData, looku
     const [ing2, setIng2] = useState("");
     const [ing3, setIng3] = useState("");
     const [serveInst, setServeInst] = useState("");
-    
+    console.log("Recipe card re-render check")
       return(
         <div>
             <div className="recipeCard">

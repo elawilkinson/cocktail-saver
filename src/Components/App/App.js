@@ -20,6 +20,11 @@ function App() {
   // Tracking the returned recipe
   const [recipe, setRecipe] = useState("glass and ice babes") // method
  
+  useEffect( () => {
+    console.log("hello from the App")
+  }, [])
+ 
+ 
   return (
     <main>
     <div className='navOnly'>
